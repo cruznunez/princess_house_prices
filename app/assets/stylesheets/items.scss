@@ -23,7 +23,21 @@
 }
 .results {
   text-align: right;
-  padding-right: 5vw;
   font-weight: 300;
   font-size: 1.2em;
+  height: 20%;
+  display: flex;
+  padding: 1em 0;
+}
+.column {
+  display: flex;
+  width: 1%;
+  flex-grow: 1;
+  flex-direction: column;
+  div {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+  }
 }
