@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
 
   # GET /items/new
   def new
-    @item = Item.new
+    @item = Item.new price: 0
   end
 
   def preview
@@ -29,7 +29,7 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-    @item = Item.new(data)
+    @item = Item.new(item_params)
 
     respond_to do |format|
       if @item.save

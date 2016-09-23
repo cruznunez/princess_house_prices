@@ -22,7 +22,7 @@ function ajaxForm() {
     var form = $(this);
     $.ajax({
       url: '/preview',
-      type: "GET",
+      type: 'GET',
       data: form.serialize()
     });
   });

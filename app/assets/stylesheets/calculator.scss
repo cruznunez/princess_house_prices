@@ -1,0 +1,33 @@
+@import 'sass';
+
+.calculator {
+  // background: blue;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid white;
+  @include mobile {
+    width: 100vw;
+  }
+  @include immobile {
+    width: 50vw;
+  }
+  .row {
+    display: flex;
+    height: 13vh;
+    .button {
+      display: flex;
+      flex-grow: 1;
+      width: 10vw;
+      align-items: center;
+      justify-content: center;
+      @include user-select(none);
+      @include immobile {
+        &:hover {
+          background: darken($bg-color, 5%);
+        }
+      }
+    }
+  }
+}

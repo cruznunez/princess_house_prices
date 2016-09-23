@@ -1,7 +1,3 @@
 <%= form_for(@item) do |f| %>
-
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.number_field :price, class: 'price', step: 0.02 %>
-  </div>
+  <%= f.number_field :price, class: 'price', step: 0.02 %>
 <% end %>

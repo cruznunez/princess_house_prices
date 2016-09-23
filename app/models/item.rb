@@ -1,7 +1,7 @@
 class Item < ActiveRecord::Base
 
   def shipping
-    return 'Not a number' unless price.positive?
+    return 0 unless price.positive?
     case price
     when 0..15_00
       1_50

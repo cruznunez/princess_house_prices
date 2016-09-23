@@ -1,0 +1,44 @@
+// sass media query sizes
+$phone-width: 768px;
+$tablet-width: 992px;
+$desktop-width: 1200px;
+$bg-color: #800013;
+// sass mixins
+@mixin mobile {
+  @media only screen and (min-width: 1px) and  (max-width: #{$phone-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$phone-width + 1}) and (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: #{$tablet-width + 1}) and (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width + 1}) {
+    @content;
+  }
+}
+
+@mixin immobile {
+  @media (min-width: #{$phone-width + 1}) {
+    @content;
+  }
+}
+
+@mixin user-select($value) {
+  -webkit-touch-callout: $value; /* iOS Safari */
+  -webkit-user-select: $value;   /* Chrome/Safari/Opera */
+  -khtml-user-select: $value;    /* Konqueror */
+  -moz-user-select: $value;      /* Firefox */
+  -ms-user-select: $value;       /* Internet Explorer/Edge */
+  user-select: $value;           /* Non-prefixed version, currently */
+}
