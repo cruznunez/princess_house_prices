@@ -16,7 +16,8 @@ numberClick = (button) ->
   new_number = val + number
   condition = number == 0 && val == "0"
   unless condition
-    input.val(new_number).trigger 'input'
+    input.val(new_number)
+    input.trigger 'input'
 
 back = ->
   input = $ '.price'

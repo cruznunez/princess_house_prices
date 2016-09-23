@@ -1,5 +1,5 @@
 update = ->
-  $('form').on 'input', ->
+  $('input').on 'input', ->
     price = parseInt cents()
     shipping_cost = shipping price
     tax_cost = tax price, shipping_cost
