@@ -31,3 +31,10 @@ header {
   line-height: 8vh;
   text-align: center;
 }
+img {
+  $padding: 0.5em;
+  position: fixed;
+  left: $padding;
+  top: $padding;
+  max-height: 30px;
+}
