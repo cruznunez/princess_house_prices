@@ -17,16 +17,17 @@ function amountFormatter() {
   });
 };
 
-function ajaxForm() {
-  $('form').on('input', function() {
-    var form = $(this);
-    $.ajax({
-      url: '/preview',
-      type: 'GET',
-      data: form.serialize()
-    });
-  });
-};
+// function ajaxForm() {
+//   $('form').on('input', function() {
+//     $('.shipping').html()
+//     var form = $(this);
+//     $.ajax({
+//       url: '/preview',
+//       type: 'GET',
+//       data: form.serialize()
+//     });
+//   });
+// };
 
 $(amountFormatter);
-$(ajaxForm);
+// $(ajaxForm);

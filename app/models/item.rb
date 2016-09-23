@@ -1,5 +1,4 @@
 class Item < ActiveRecord::Base
-
   def shipping
     return 0 unless price.positive?
     case price
