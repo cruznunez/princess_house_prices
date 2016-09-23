@@ -1,5 +1,7 @@
 @import "sass";
 
+$calculator-width: 45%;
+
 body {
   width: 100vw;
   height: 100vh;
@@ -21,7 +23,7 @@ body {
     width: 100%;
   }
   @include immobile {
-    width: 50%;
+    width: $calculator-width;
   }
 }
 header {
@@ -43,6 +45,6 @@ img {
   padding: $padding;
 
   @include immobile {
-    left: calc(25vw + 3px);
+    left: calc((100% - #{$calculator-width})/2 + 3px);
   }
 }
