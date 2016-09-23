@@ -3,11 +3,11 @@ buttonPress = ->
 
   $('.button').on 'touchend mouseup', -> handleEnd @
 
-  $('.number').click -> numberClick @
+  $('.number').on 'mouseup', -> numberClick @
 
-  $('.back').click back
+  $('.back').on 'mouseup', back
 
-  $('.clear').click clear
+  $('.clear').on 'mouseup', clear
 
 numberClick = (button) ->
   input = $ '.price'
