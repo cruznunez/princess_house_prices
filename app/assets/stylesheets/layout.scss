@@ -34,14 +34,15 @@ header {
   align-items: center;
 }
 img {
-  $padding: 1.5vh;
+  $padding: 1vh;
   max-height: 8vh;
 
-  left: 0; top: 0;
+  top: 0;
+  left: 5px;
   position: fixed;
   padding: $padding;
 
   @include immobile {
-    left: 25vw;
+    left: calc(25vw + 5px);
   }
 }
