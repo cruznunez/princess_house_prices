@@ -4,6 +4,10 @@ body {
   width: 100vw;
   height: 100vh;
   background: #F9F9F9;
+  color: white;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 .container {
   left: 0;
@@ -12,7 +16,7 @@ body {
   height: 100vh;
   background: $bg-color;
   position: absolute;
-  box-shadow: 0 1px 30px rgba(0,0,0,.1);
+  box-shadow: 0 1px 30px rgba(0,0,0,.4);
   @include mobile {
     width: 100%;
   }
@@ -24,4 +28,5 @@ header {
   height: 8vh;
   line-height: 8vh;
   text-align: center;
+  font-weight: 300;
 }
