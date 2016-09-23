@@ -1,0 +1,11 @@
+<div class="results">
+  <div class="shipping">
+    Shipping: <%= @item.shipping.to_dollars %>
+  </div>
+  <div class="tax">
+    Tax: <%= @item.tax.to_dollars %>
+  </div>
+  <div class="total">
+    Total: <%= @item.total.to_dollars %>
+  </div>
+</div>
