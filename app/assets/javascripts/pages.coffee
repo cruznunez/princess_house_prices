@@ -3,7 +3,11 @@ buttonPress = ->
 
   $('.button').on 'touchend mouseup', -> handleEnd @
 
-  $('.number').on 'mouseup', -> numberClick @
+  $('.number').on 'mouseup', ->
+    numberClick @ if screen.width > 768
+
+  $('.number').on 'touchend', ->
+    numberClick @ if screen.width < 768
 
   $('.back').on 'mouseup', back
 
@@ -16,8 +20,7 @@ numberClick = (button) ->
   new_number = val + number
   condition = number == 0 && val == "0"
   unless condition
-    input.val(new_number)
-    input.trigger 'input'
+    input.val(new_number).trigger 'input'
 
 back = ->
   input = $ '.price'
