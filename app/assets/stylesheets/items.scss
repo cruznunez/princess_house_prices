@@ -1,7 +1,7 @@
 @import "sass";
 
 form {
-  height: 7vh;
+  height: 10vh;
 }
 .price {
   background: $bg-color;
@@ -11,7 +11,7 @@ form {
   font-size: 2em;
   right: 0;
   position: absolute;
-  height: 7vh;
+  height: 10vh;
   padding-right: 5%;
   &:focus {
     outline: none;
