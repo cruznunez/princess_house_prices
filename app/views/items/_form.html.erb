@@ -2,6 +2,6 @@
 
   <div class="field">
     <%= f.label :price %><br>
-    <%= f.search_field :price, class: 'price' %>
+    <%= f.number_field :price, class: 'price', step: 0.02 %>
   </div>
 <% end %>
