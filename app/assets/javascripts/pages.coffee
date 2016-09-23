@@ -3,6 +3,10 @@ buttonPress = ->
 
   $('.button').on 'touchend mouseup', -> handleEnd @
 
+  # Desktops and android devices recognize a mouseup and click real fast, but not touchend
+  # On IOS devices, mouseup & click lag, but touchend registers real fast
+  # so if the screen is large, we should use mouseup or click to listen to clicks
+  # && if the screen is small, we only use touchend to listen to clicks
   $('.number').on 'mouseup', ->
     numberClick @ if screen.width > 768
 
@@ -18,7 +22,7 @@ numberClick = (button) ->
   val = input.val()
   number = parseInt $(button).html()
   new_number = val + number
-  condition = number == 0 && val == "0"
+  condition = number == 0 && val == '0'
   unless condition
     input.val(new_number).trigger 'input'
 
