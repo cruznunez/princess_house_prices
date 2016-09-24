@@ -8,8 +8,8 @@ body {
   background: #F9F9F9;
   color: white;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Quicksand', sans-serif; // 100 200 300 400
+  font-family: 'Work Sans', sans-serif; // 300 400
 }
 .container {
   left: 0;
@@ -36,15 +36,15 @@ header {
   align-items: center;
 }
 img {
-  $padding: 1vh;
-  max-height: 8vh;
+  $padding: 1em;
+  max-height: 7vh;
 
-  top: 0;
-  left: 3px;
+  top: $padding;
+  left: $padding;
   position: fixed;
-  padding: $padding;
+  // padding: $padding;
 
   @include immobile {
-    left: calc((100% - #{$calculator-width})/2 + 3px);
+    left: calc((100% - #{$calculator-width})/2 + #{$padding});
   }
 }

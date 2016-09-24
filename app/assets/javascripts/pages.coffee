@@ -36,16 +36,14 @@ back = ->
 
 clear = ->
   input = $('.price').val 0
-  $('.shipping span').html '$0.00'
-  $('.tax span').html '$0.00'
-  $('.total span').html '$0.00'
+  $('.shipping').html '$0.00'
+  $('.tax').html '$0.00'
+  $('.total').html '$0.00'
 
 handleStart = (button) =>
-  $(button).css 'background', '#67000f'
-  $(button).children('div').css 'margin-top', '5px'
+  $(button).addClass 'pressed'
 
 handleEnd = (button) ->
-  $(button).css 'background', ''
-  $(button).children('div').css 'margin-top', ''
+  $(button).removeClass 'pressed'
 
 $ buttonPress
