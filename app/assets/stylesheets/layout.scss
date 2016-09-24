@@ -1,6 +1,6 @@
 @import "sass";
 
-$calculator-width: 45%;
+$calculator-width: 100vh * 9 / 16; // aspect ratio based on height of screen
 
 body {
   width: 100vw;

@@ -3,6 +3,7 @@ buttonPress = ->
   # On IOS devices, mouseup & click lag, but touchend registers real fast
   # so if the screen is large, we should use mouseup or click to listen to clicks
   # && if the screen is small, we only use touchend to listen to clicks
+
   $('.button').on 'mousedown', -> handleStart @ if screen.width > 768
   $('.button').on 'touchstart', -> handleStart @ if screen.width <= 768
 
