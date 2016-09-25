@@ -3,6 +3,9 @@ $phone-width: 768px;
 $tablet-width: 992px;
 $desktop-width: 1200px;
 $bg-color: #800013;
+$time: 1s;
+$calculator-width: 100vh * 9 / 16; // aspect ratio based on height of screen
+
 // sass mixins
 @mixin mobile {
   @media only screen and (min-width: 1px) and  (max-width: #{$phone-width}) {

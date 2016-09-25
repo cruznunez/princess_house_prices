@@ -1,0 +1,56 @@
+@import 'sass';
+
+.logo-container {
+  // Flex
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 15vh;
+  width: 23%;
+  position: fixed;
+  top: 2vh;
+  z-index: 0; // TODO: FIX
+
+  transition: all $time $time/2;
+}
+img {
+  $padding: 1em;
+  $curve: cubic-bezier(.28,.12,0,1);
+  $curve-2: cubic-bezier(.33,.01,0,1);
+  $curve-3: cubic-bezier(.15,0,0,1);
+  $curve-4: cubic-bezier(1,0,1,1);
+  $curve-5: cubic-bezier(.8,0,.2,1);
+  width: 7vh;
+
+  transition: all $time $curve-5;
+
+  @include immobile {
+    left: calc((100% - #{$calculator-width})/2 + #{$padding});
+  }
+}
+a {
+  // button css
+  display: flex;
+  border: 1px solid white;
+  border-radius: 8px;
+  height: 30px;
+  width: $calculator-width*0.5;
+  @include mobile { width: 50%; }
+
+  // text css
+  color: inherit;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  // animation
+  transition: all 0.5s;
+  opacity: 0;
+
+  &:hover {
+    background: white;
+    color: $bg-color;
+  }
+}

@@ -1,6 +1,6 @@
 @import "sass";
 
-$calculator-width: 100vh * 9 / 16; // aspect ratio based on height of screen
+
 
 body {
   width: 100vw;
@@ -8,8 +8,7 @@ body {
   background: #F9F9F9;
   color: white;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-family: 'Quicksand', sans-serif; // 100 200 300 400
-  font-family: 'Work Sans', sans-serif; // 300 400
+  font-family: 'Work Sans', sans-serif; // eeights: 100 200 300 400
 }
 .container {
   left: 0;
@@ -25,6 +24,29 @@ body {
   @include immobile {
     width: $calculator-width;
   }
+  &.hidden {
+    div, header, input {
+      opacity: 0;
+    }
+    img {
+      @include mobile {
+        width: 80vmin;
+      }
+      @include immobile {
+        width: $calculator-width*0.8;
+        left: calc( (100vw - #{$calculator-width*0.8}) / 2 );
+      }
+    }
+    a {
+      opacity: 1;
+    }
+    .logo-container {
+      z-index: 1;
+      top: 15vh;
+      height: 100vh - (15vh + 20vh);
+      width: 100%;
+    }
+  }
 }
 header {
   font-size: 1.1em;
@@ -34,17 +56,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-img {
-  $padding: 1em;
-  max-height: 7vh;
 
-  top: $padding;
-  left: $padding;
-  position: fixed;
-  // padding: $padding;
-
-  @include immobile {
-    left: calc((100% - #{$calculator-width})/2 + #{$padding});
-  }
+  transition: opacity $time/2 $time/2;
 }

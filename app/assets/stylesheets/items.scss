@@ -1,7 +1,7 @@
 @import 'sass';
 
 .price {
-  background: $bg-color;
+  background: transparent;
   border: none;
   color: white;
   text-align: right;
@@ -12,14 +12,10 @@
   height: 22%;
   padding-right: 5vw;
   width: 100%;
+
+  transition: opacity $time/2 $time/2;
   &:focus {
     outline: none;
-  }
-
-  &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-    // display: none; // <- Crashes Chrome on hover
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
   }
 }
 .results {
@@ -29,10 +25,12 @@
   height: 20%;
   display: flex;
   padding: 0 0 2em;
+
+  transition: all $time/2 $time/2;
 }
 .title span {
   // border-bottom: 1px solid white;
-  font-weight: 400; 
+  font-weight: 400;
 }
 .column {
   display: flex;
