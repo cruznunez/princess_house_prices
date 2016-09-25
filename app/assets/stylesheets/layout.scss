@@ -28,7 +28,8 @@ body {
     }
     img {
       @include mobile {
-        width: 80vmin;
+        // width: 80vmin;
+        width: 65vh*0.7;
       }
       @include immobile {
         width: $calculator-width*0.8;
