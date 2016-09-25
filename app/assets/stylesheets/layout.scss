@@ -1,7 +1,5 @@
 @import "sass";
 
-
-
 body {
   width: 100vw;
   height: 100vh;
@@ -44,7 +42,13 @@ body {
       z-index: 1;
       top: 15vh;
       height: 100vh - (15vh + 20vh);
-      width: 100%;
+      @include mobile {
+        width: 100%;
+      }
+      @include immobile {
+        width: $calculator-width;
+      }
+
     }
   }
 }

@@ -8,12 +8,19 @@
   justify-content: space-between;
 
   height: 15vh;
-  width: 23%;
   position: fixed;
   top: 2vh;
-  z-index: 0; // TODO: FIX
+  // z-index: 0; // TODO: FIX
 
   transition: all $time $time/2;
+
+  @include mobile {
+    width: 23%;
+  }
+  @include immobile {
+    width: $calculator-width*0.23;
+  }
+
 }
 img {
   $padding: 1em;
