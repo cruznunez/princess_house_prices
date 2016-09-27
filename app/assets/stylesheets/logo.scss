@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  height: 15vh;
+  // height: 15vh;
   position: fixed;
   top: 2vh;
   // z-index: 0; // TODO: FIX
@@ -37,7 +37,7 @@ img {
     left: calc((100% - #{$calculator-width})/2 + #{$padding});
   }
 }
-a {
+a.button {
   // button css
   display: flex;
   border: 1px solid white;

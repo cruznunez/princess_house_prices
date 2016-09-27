@@ -1,8 +1,8 @@
 start = ->
-  $('a').on 'mouseup', unhide if screen.width > 768
-  $('a').on 'touchend', unhide if screen.width <= 768
-
-unhide = ->
-  $('.container').removeClass 'hidden'
+  $('a').on 'mouseup touchend', ->
+    $('.container').removeClass 'hidden'
+    setTimeout ->
+      $('.button').remove()
+    , 1000
 
 $ start
