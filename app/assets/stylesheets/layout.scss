@@ -26,17 +26,15 @@ body {
     div, header, input {
       opacity: 0;
     }
-    img {
+    .icon-logo {
       @include mobile {
-        // width: 80vmin;
-        width: 65vh*0.7;
+        font-size: 48.5vh;
       }
       @include immobile {
-        width: $calculator-width*0.8;
-        left: calc( (100vw - #{$calculator-width*0.8}) / 2 );
+        font-size: $calculator-width*0.82;
       }
     }
-    a {
+    .welcome {
       opacity: 1;
     }
     .logo-container {

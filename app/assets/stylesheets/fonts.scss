@@ -1,0 +1,31 @@
+@import 'https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400';
+
+@font-face {
+  font-family: 'princesshouse';
+  src:  asset_url('princesshouse.eot?1xryv7');
+  src:  asset_url('princesshouse.eot?1xryv7#iefix') format('embedded-opentype'),
+    asset_url('princesshouse.ttf?1xryv7') format('truetype'),
+    asset_url('princesshouse.woff?1xryv7') format('woff'),
+    asset_url('princesshouse.svg?1xryv7#princesshouse') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'princesshouse' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-logo:before {
+  content: "\e900";
+}
