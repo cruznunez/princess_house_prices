@@ -23,7 +23,7 @@ body {
     width: $calculator-width;
   }
   &.hidden {
-    div, header, input {
+    table, div, header, input {
       opacity: 0;
     }
     .icon-logo {

@@ -4,9 +4,9 @@ update = ->
     shipping_cost = shipping price
     tax_cost = tax price, shipping_cost
     total = price + shipping_cost + tax_cost
-    $('.shipping').html toDollars shipping_cost
-    $('.tax').html toDollars tax_cost
-    $('.total').html toDollars total
+    $('#shipping').html toDollars shipping_cost
+    $('#tax').html toDollars tax_cost
+    $('#total').html toDollars total
 
 shipping = (x) ->
   switch

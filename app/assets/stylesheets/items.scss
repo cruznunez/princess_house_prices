@@ -19,28 +19,18 @@
   }
 }
 .results {
-  text-align: right;
-  font-weight: 200;
   font-size: 1.2em;
+  font-weight: 200;
   height: 20%;
-  display: flex;
   padding: 0 0 2em;
-
+  text-align: center;
   transition: all $time/2 $time/2;
-}
-.title span {
-  // border-bottom: 1px solid white;
-  font-weight: 400;
-}
-.column {
-  display: flex;
-  width: 1%;
-  flex-grow: 1;
-  flex-direction: column;
-  div {
-    display: flex;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+
+  td {
+    width: 30%;
   }
+}
+.titles {
+  font-weight: 400;
 }

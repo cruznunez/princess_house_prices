@@ -4,20 +4,23 @@ buttonPress = ->
   # so if the screen is large, we should use mouseup or click to listen to clicks
   # && if the screen is small, we only use touchend to listen to clicks
 
-  $('.button').on 'mousedown', -> handleStart @ if screen.width > 768
-  $('.button').on 'touchstart', -> handleStart @ if screen.width <= 768
+  $('td').on 'mousedown', -> handleStart @ if screen.width > 768
+  $('td').on 'touchstart', -> handleStart @ if screen.width <= 768
 
-  $('.button').on 'mouseup', -> handleEnd @ if screen.width > 768
-  $('.button').on 'touchend', -> handleEnd @ if screen.width <= 768
+  $('body').on 'mouseup', handleEnd if screen.width > 768
+  $('body').on 'touchend', handleEnd if screen.width <= 768
 
-  $('.number').on 'mouseup', -> numberClick @ if screen.width > 768
-  $('.number').on 'touchend', -> numberClick @ if screen.width <= 768
+  $('td').on 'mousedown', -> buttonClick @ if screen.width > 768
+  $('td').on 'touchend', -> buttonClick @ if screen.width <= 768
 
-  $('.back').on 'mouseup', back if screen.width > 768
-  $('.back').on 'touchend', back if screen.width <= 768
-
-  $('.clear').on 'mouseup', clear if screen.width > 768
-  $('.clear').on 'touchend', clear if screen.width <= 768
+buttonClick = (button) ->
+  text = $(button).text()
+  if text.match /\d/
+    numberClick button
+  else if text == '<'
+    back()
+  else if text == '<<'
+    clear()
 
 numberClick = (button) ->
   input = $ '.price'
@@ -38,14 +41,15 @@ back = ->
 
 clear = ->
   input = $('.price').val 0
-  $('.shipping').html '$0.00'
-  $('.tax').html '$0.00'
-  $('.total').html '$0.00'
+  $('#shipping').html '$0.00'
+  $('#tax').html '$0.00'
+  $('#total').html '$0.00'
 
 handleStart = (button) =>
+  handleEnd()
   $(button).addClass 'pressed'
 
-handleEnd = (button) ->
-  $(button).removeClass 'pressed'
+handleEnd = ->
+  $('td').removeClass 'pressed'
 
 $ buttonPress

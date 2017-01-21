@@ -1,24 +1,18 @@
 @import 'sass';
 
 .calculator {
-  // background: blue;
-  display: flex;
-  flex-direction: column;
+  border-collapse: collapse;
   font-size: 1.5em;
   font-weight: 200;
   border-top: 1px solid white;
   height: 50%;
   width: 100%;
   transition: opacity $time/2 $time/2;
-  .row {
-    display: flex;
+  tr {
     height: 25%;
-    .button {
-      display: flex;
-      flex-grow: 1;
-      width: 10vw;
-      align-items: center;
-      justify-content: center;
+    td {
+      width: 10%;
+      text-align: center;
       &.pressed {
         background: #67000F;
         padding-top: 5px;
