@@ -3,13 +3,13 @@
 .logo-container {
   // Flex
   align-items: center;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   height: 10vh;
   position: fixed;
   top: 2vh;
+  text-align: center;
   // z-index: 0; // TODO: FIX
 
   transition: all $time $time/2;
@@ -37,17 +37,20 @@
 }
 a.welcome {
   // button css
-  display: flex;
   border: 1px solid white;
   border-radius: 8px;
+  bottom: 0;
   height: 30px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
   width: $calculator-width*0.5;
   @include mobile { width: 50%; }
 
   // text css
   color: inherit;
-  align-items: center;
-  justify-content: center;
+  line-height: 30px;
   text-decoration: none;
 
   // animation

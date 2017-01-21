@@ -12,7 +12,7 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-  height: 100vh;
+  height: 100%;
   background: $bg-color;
   position: absolute;
   box-shadow: 0 1px 30px rgba(0,0,0,.4);
@@ -54,11 +54,9 @@ body {
 header {
   font-size: 1.1em;
   font-weight: 300;
-  height: 8vh;
+  height: 8%;
+  line-height: 8vh;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   transition: opacity $time/2 $time/2;
 }
