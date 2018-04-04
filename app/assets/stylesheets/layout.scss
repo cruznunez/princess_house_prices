@@ -16,10 +16,10 @@ body {
   background: $bg-color;
   position: absolute;
   box-shadow: 0 1px 30px rgba(0,0,0,.4);
-  @include mobile {
+  @include portrait {
     width: 100%;
   }
-  @include immobile {
+  @include landscape {
     width: $calculator-width;
   }
   &.hidden {
@@ -27,10 +27,15 @@ body {
       opacity: 0;
     }
     .icon-logo {
-      @include mobile {
-        font-size: 48.5vh;
+      @include portrait {
+        @include mobile {
+          font-size: 82vw;
+        }
+        @include tablet {
+          font-size: 70vw;
+        }
       }
-      @include immobile {
+      @include landscape {
         font-size: $calculator-width*0.82;
       }
     }
@@ -41,10 +46,10 @@ body {
       z-index: 1;
       top: 15vh;
       height: 100vh - (15vh + 20vh);
-      @include mobile {
+      @include portrait {
         width: 100%;
       }
-      @include immobile {
+      @include landscape {
         width: $calculator-width;
       }
 

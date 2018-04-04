@@ -10,13 +10,12 @@
 
   transition: all $time $time/2;
 
-  @include mobile {
+  @include portrait {
     width: 23%;
   }
-  @include immobile {
+  @include landscape {
     width: $calculator-width*0.23;
   }
-
 }
 .icon-logo {
   $padding: 1em;
@@ -41,8 +40,12 @@ a.welcome {
   margin: auto;
   position: absolute;
   right: 0;
-  width: $calculator-width*0.5;
-  @include mobile { width: 50%; }
+  @include portrait {
+    width: 50%;
+  }
+  @include landscape {
+    width: $calculator-width*0.5;
+  }
 
   // text css
   color: inherit;
