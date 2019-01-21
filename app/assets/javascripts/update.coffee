@@ -10,19 +10,23 @@ update = ->
 
 shipping = (x) ->
   switch
-    when 0 <= x <= 1500
-      150
-    when 1501 <= x <= 4000
+    when 0 <= x <= 5000
       350
-    when 4001 <= x <= 8000
+    when 5001 <= x <= 10000
       550
-    when 8001 <= x <= 12000
-      750
-    when 12001 <= x <= 20000
-      950
-    when 20001 <= x <= 40000
+    when 10001 <= x <= 20000
+      1050
+    when 20001 <= x <= 30000
       1500
-    else 3000
+    when 30001 <= x <= 50000
+      2600
+    when 50001 <= x <= 75000
+      3600
+    when 75001 <= x <= 100000
+      4600
+    when 100001 <= x <= 150000
+      5600
+    else 6600
 
 tax = (price, shipping) ->
   (price + shipping) * 75/1000
