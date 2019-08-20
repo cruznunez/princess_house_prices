@@ -11,7 +11,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'uglifier', '>= 1.3.0'
 group :production do
   gem 'pg'
-  gem 'rails_12factor'
 end
 group :development, :test do
   gem 'sqlite3'
