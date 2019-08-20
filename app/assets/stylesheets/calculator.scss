@@ -14,7 +14,7 @@
       width: 10%;
       text-align: center;
       &.pressed {
-        background: #67000F;
+        background: darken($bg-color, 5%);
         padding-top: 5px;
       }
       @include user-select(none);
