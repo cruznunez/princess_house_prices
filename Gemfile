@@ -4,7 +4,7 @@ ruby '2.4.1'
 
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
-gem 'puma', '3.7.1'
+gem 'puma', '4.3.9'
 gem 'rails', '4.2.11.1'
 gem 'sass-rails', '~> 5.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
